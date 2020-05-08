@@ -66,7 +66,7 @@ ne font pas partie de cette famille (ils héritent de `Control` et non de `Pane`
 - On fait parfois la distinction entre composants simples (labels, champs texte, boutons, …) et composants complexes (tables, arbres,
 media-player, navigateur, …).
 
-- Dans ce chapitre, nous présenterons quelques composant simples et décrirons la manière de les créer et de les utiliser.
+- Dans ce chapitre, nous présenterons quelques composants simples et décrirons la manière de les créer et de les utiliser.
 
 - Une fois que l'on a compris le principe de fonctionnement, il est plus facile de consulter la documentation officielle 
 et de découvrir les propriétés et les comportements des composants offerts par la librairie JavaFX (les mêmes principes 
@@ -146,6 +146,7 @@ et possède donc des propriétés et des fonctionnalités un peu différentes.
 
 ---
 # Label
+<img src="slide12.png" style="position: absolute; left: 600px;  top: 30px;" >
 ```java
 private HBox root = new HBox(20);
 private Label lblA = new Label("Hello");
@@ -250,7 +251,9 @@ public void start(Stage primaryStage) throws Exception {
    root.getChildren().add(btnMulti);
    ...
 }
+
 ```
+<img src="slide16.png" style="position: absolute; left: 750px;  top: 300px;" >
 ---
 # Saisie de textes
 
@@ -380,7 +383,10 @@ public void start(Stage primaryStage) throws Exception {
    primaryStage.setTitle("TextField Test");
    primaryStage.show();
 }
+
 ```
+<img src="slide23.png" style="position: absolute; left: 500px;  top: 50px;" >
+
 ---
 # TextFormatter
 
@@ -421,6 +427,7 @@ utiliser cette propriété que si l'on a défini un convertisseur dans le format
 - Si l'on souhaite gérer le format d'affichage et/ou traiter certaines erreurs, il est préférable de redéfinir les méthodes de conversion.
 ---
 # TextFormatter
+<img src="slide26.png" style="position: absolute; left: 720px;  top: 50px;" >
 
 - Exemple de convertisseur associé à un champ texte :
 
@@ -551,6 +558,7 @@ si les deux champs texte sont remplis.
     }
 
 ```
+<img src="slide31.png" style="position: absolute; left: 600px;  top: 30px;" >
 ---
 class: center, middle
 

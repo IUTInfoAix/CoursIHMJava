@@ -8,6 +8,7 @@ class: center, middle
 class: center, middle
 
 # Cours 2: JavaFX
+
 ---
 # Historique
 - A l'origine du langage Java, les interfaces graphiques étaient créées
@@ -648,6 +649,7 @@ root.getChildren().addAll(btnOk, btnQuit);
     
 ---
 # HBox
+<img src="slide43.png" style="position: absolute; left: 600px;  top: 10px;" >
 Exemple (déclaration des composants et code de la méthode `start()`) :
 ```java
 private HBox root;
@@ -673,10 +675,12 @@ public void start(Stage primaryStage) {
    primaryStage.setScene(new Scene(root, 300, 100));
    primaryStage.show();
 }
+
 ```
 
 ---
 # VBox
+<img src="slide44.png" style="position: absolute; left: 700px;  top: 10px;" >
 - Le layout `VBox` place les composants verticalement, sur une colonne. Les composants sont ainsi ajoutés à la suite les uns des autres.
 
 - Toutes les propriétés et méthodes décrites pour le conteneur `HBox` s'appliquent également au conteneur `VBox` avec seulement quelques adaptations assez évidentes. 
@@ -687,6 +691,7 @@ public void start(Stage primaryStage) {
 private VBox root;
 private Button btnA = new Button("Alpha");
 private Label lblB = new Label("Bravo");
+private ComboBox<String> cbbC = new ComboBox<>();
 
 @Override
 public void start(Stage primaryStage) {
@@ -694,13 +699,12 @@ public void start(Stage primaryStage) {
    VBox.setVgrow(btnA, Priority.ALWAYS);
    root = new VBox(10); // Vertical Spacing : 10
 
-   root.getChildren().add(btnA);
-   root.getChildren().add(lblB);
-   cbbC.getItems().addAll("Charlie", "Delta");
+   // Initialisation et ajout des composants comme au transparent précédent
 
-   primaryStage.setScene(new Scene(root, 180, 150));
+   primaryStage.setScene(new Scene(root, 100, 100));
    primaryStage.show();
 }
+
 ```
 
 ---
@@ -741,7 +745,8 @@ public void start(Stage primaryStage) {
 }
 ```
 ---
-# FlowPane 
+# FlowPane
+<img src="slide47.png" style="position: absolute; left: 600px;  top: 50px;" >
 - Exemple :
 
 ```java
@@ -782,6 +787,7 @@ public void start(Stage primaryStage) {
 
 ---
 # BorderPane
+<img src="slide49.png" style="position: absolute; left: 650px;  top: 7px;" >
 - Le conteneur `BorderPane` permet de placer les composants enfants dans cinq zones : `Top`, `Bottom`, `Left`, `Right` et `Center`.
 
 - Un seul objet `Node` (composant, conteneur, …) peut être placé dans chacun de ces emplacements.
