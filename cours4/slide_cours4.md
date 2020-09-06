@@ -516,11 +516,11 @@ empilant, puis une autre fois en les dépilant.
 
 # Problème de cette "quasi généricité"
 
-- Comme tous les types peuvent être généralisé en `Object`, on pourrait mettre des objets sans liens dans la même pile.
+- Comme tous les types peuvent être généralisés en `Object`, on pourrait mettre des objets sans liens dans la même pile.
 
 - La particularisation étant de la responsabilité du programmeur, c'est à lui qu'il incombera d'être certain que son transtypage est licite.
 
-- Potentiellement, dès qu'une collection est passée à un tiers (code dont on a pas la maîtrise), il devient impossible d'être certain de la bonne utilisation.
+- Potentiellement, dès qu'une collection est passée à un tiers (code dont on n'a pas la maîtrise), il devient impossible d'être certain de la bonne utilisation.
 
 - Toutes ces erreurs de particularisation n'ont lieu qu'à l'exécution.
 
@@ -722,7 +722,8 @@ public abstract class ObjetGraphique {
   - variables publiques statiques finales (des constantes de classe)
 
   - tous ces membres sont implicitement `public abstract` (les méthodes) ou `public static final` (les variables)
-- Comme les classes abstraite, une interface ne s'instancie pas.
+  
+- Comme les classes abstraites, une interface ne s'instancie pas.
 
 - Une interface est une liste de promesses (contrat, cahier des charges, spécification,...)
 
